@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+/* ENCABEZADO: Alineación a la izquierda */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea logo y texto a la izquierda */
+    gap: 20px;
+    background-color: #f80b0b;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* MENU */
+nav {
+    background-color: #008000; /* Verde */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECCIONES: Diseño de Tarjeta (Mejora de Nota) */
+section {
+    padding: 25px; /* Más relleno */
+    margin: 25px auto; /* Centra las secciones */
+    max-width: 900px; /* Limita el ancho en pantallas grandes */
+    background-color: white;
+    border-radius: 12px; /* Más redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto 3D */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el mouse */
+}
+
+/* TITULOS */
+h2 {
+    color: #b30000;
+}
+
+/* MEJORA DE LISTAS (Navidad y Valores) */
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+section ul li::before {
+    content: "•";
+    color: #008000;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background-color: #008000; /* Verde */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    clear: both; /* Asegura que siempre esté al final */
+}
+
+/* --- ESTILOS PARA LA SECCIÓN DE REDES SOCIALES (Botones Llamativos) --- */
+
+#redes {
+    text-align: center;
+}
+
+#redes ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+#redes ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #b30000; 
+    
+    /* Diseño del botón */
+    padding: 12px 25px;
+    border: 3px solid #b30000;
+    border-radius: 8px;
+    
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+    display: block;
+}
+
+#redes ul li a:hover {
+    background-color: #b30000; 
+    color: white;
+    transform: scale(1.05); 
+}
+
+/* --- MEDIA QUERY (Responsive Design para Móviles) --- */
+
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column; /* Coloca el logo encima del texto */
+        text-align: center;
+        gap: 5px;
+    }
+
+    /* Oculta los títulos del header en móvil para ahorrar espacio (opcional) */
+    header div h1 {
+        font-size: 1.5em; 
+    }
+
+    nav ul {
+        flex-direction: column; /* Menú vertical en móvil */
+        padding: 5px 0;
+    }
+
+    #redes ul {
+        flex-direction: column; /* Botones de redes uno debajo del otro en móvil */
+    }
+    
+    section {
+        margin: 10px;
+        max-width: none;
+    }
+}
